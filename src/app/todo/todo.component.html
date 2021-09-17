@@ -1,17 +1,19 @@
-<aside>
-  <form [formGroup]="form">
-    <label for="task">add a task</label>
-    <input formControlName="text" type="text" name="task" id="task">
-    <button (click)="addTask($event)">add task</button>
-  </form>
-  <ul>
-    <li *ngFor="let todo of todos, let i = index">
-      <input type="checkbox" id="todos" name="todo">
-      <a [routerLink]="[i]">{{todo.text}}</a>
-    </li>
-  </ul>
-</aside>
+<main>
+  <mat-nav-list>
+      <mat-list-item role="listitem" *ngFor="let todo of todos, let i = index">
+        <a matLine [routerLink]="[i]">{{todo.text}}</a>
+        <input type="checkbox" id="todos" name="todo">
+      </mat-list-item>
+  </mat-nav-list>
+  <footer>
+    <form [formGroup]="form">
+      <label for="task">add a task</label>
+      <input formControlName="text" type="text" name="task" id="task">
+      <button (click)="addTask($event)">add task</button>
+    </form>
+  </footer>
+</main>
 
-<section>
-  <router-outlet></router-outlet>
-</section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
