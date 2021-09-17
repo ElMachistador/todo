@@ -1,5 +1,4 @@
-<ng-container *ngIf="todo$ | async as todo">
-
-  <h3>{{todo.text}}</h3>
-
-</ng-container>
+<form [formGroup]="form" (ngSubmit)="update()">
+  <input type="checkbox" formControlName="checked">
+  <input type="text" formControlName="text" >
+</form>

@@ -24,8 +24,7 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTask(event: Event) {
-    event.preventDefault()
+  addTask() {
     const text = this.form.value
     TODOS.push(text)
     this.form.reset()

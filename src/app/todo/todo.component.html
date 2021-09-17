@@ -6,10 +6,12 @@
       </mat-list-item>
   </mat-nav-list>
   <footer>
-    <form [formGroup]="form">
-      <label for="task">add a task</label>
-      <input formControlName="text" type="text" name="task" id="task">
-      <button (click)="addTask($event)">add task</button>
+    <form [formGroup]="form" (ngSubmit)="addTask()">
+      <mat-form-field appearance="outline">
+        <mat-label for="task">add a task</mat-label>
+        <input matInput formControlName="text" type="text" name="task" id="task">
+        <mat-icon matSuffix (click)="addTask()">add</mat-icon>
+      </mat-form-field>
     </form>
   </footer>
 </main>

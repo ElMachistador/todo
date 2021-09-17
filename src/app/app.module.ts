@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoComponent } from './todo/todo.component';
 import { SelectedComponent } from './selected/selected.component';
 import {MatListModule} from '@angular/material/list'; 
+import { MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatIconModule} from '@angular/material/icon'; 
+import {MatInputModule} from '@angular/material/input'
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import {MatListModule} from '@angular/material/list';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
