@@ -27,13 +27,15 @@ export class TodoComponent implements OnInit {
   addTask(event: Event) {
     event.preventDefault()
     const text = this.form.value
-    this.todos.push(text)
+    TODOS.push(text)
     this.form.reset()
   }
 
 
   select(index: number) {
     this.index = index
+    const selected = this.todos[index]
+    console.log(selected)
   }
 
 }

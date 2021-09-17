@@ -7,13 +7,11 @@
   <ul>
     <li *ngFor="let todo of todos, let i = index">
       <input type="checkbox" id="todos" name="todo">
-        <span (click)="select(i)">{{todo.text}}</span>
+      <a [routerLink]="[i]">{{todo.text}}</a>
     </li>
   </ul>
 </aside>
 
-<app-selected>
-  
-</app-selected>
-  
-  
+<section>
+  <router-outlet></router-outlet>
+</section>
